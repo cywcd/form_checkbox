@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>0元抽奖iphone6手机免费送</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="css/lottery_m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body class="bg1">
+<header class="banner"><img src="images/lottery_m/banner_m.png"></header>
+<section class="con">
+	<article class="wrap">
+    	<div class="conshare">
+        	<p>您的抽奖号码是：<span>2579634</span></p>
+            <div class="time_js">距离本期大奖公布日期还剩：<br><span class="cor_red"><em class="day">-</em>天<em class="hour">-</em>时<em class="minute">-</em>分<em class="second">-</em>秒</span></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="bton"  onClick="_system._guide(true)">邀请朋友一起拿iphone 6</div>
+    </article>
+</section>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	countDown("2015/5/26 23:59:59",".time_js .day",".time_js .hour",".time_js .minute",".time_js .second");
+});
+
+function countDown(time,day_elem,hour_elem,minute_elem,second_elem){
+	//if(typeof end_time == "string")
+	var end_time = new Date(time).getTime(),//月份是实际月份-1
+	//current_time = new Date().getTime(),
+	sys_second = (end_time-new Date().getTime())/1000;
+	var timer = setInterval(function(){
+		if (sys_second > 0) {
+			sys_second -= 1;
+			var day = Math.floor((sys_second / 3600) / 24);
+			var hour = Math.floor((sys_second / 3600) % 24);
+			var minute = Math.floor((sys_second / 60) % 60);
+			var second = Math.floor(sys_second % 60);
+			day_elem && $(day_elem).text(day);//计算天
+			$(hour_elem).text(hour<10?"0"+hour:hour);//计算小时
+			$(minute_elem).text(minute<10?"0"+minute:minute);//计算分
+			$(second_elem).text(second<10?"0"+second:second);// 计算秒
+		} else { 
+			clearInterval(timer);
+		}
+	}, 1000);
+}
+</script>
+
+<script type="text/javascript">
+
+    var _system={
+
+        $:function(id){return document.getElementById(id);},
+
+   _client:function(){
+
+      return {w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,bw:document.documentElement.clientWidth,bh:document.documentElement.clientHeight};
+
+   },
+
+   _scroll:function(){
+
+      return {x:document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft,y:document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop};
+
+   },
+
+   _cover:function(show){
+
+      if(show){
+
+     this.$("cover").style.display="block";
+
+     this.$("cover").style.width=(this._client().bw>this._client().w?this._client().bw:this._client().w)+"px";
+
+     this.$("cover").style.height=(this._client().bh>this._client().h?this._client().bh:this._client().h)+"px";
+
+  }else{
+
+     this.$("cover").style.display="none";
+
+  }
+   },
+
+   _guide:function(click){
+
+      this._cover(true);
+
+      this.$("guide").style.display="block";
+
+      this.$("guide").style.top=(_system._scroll().y+5)+"px";
+
+      window.onresize=function(){_system._cover(true);_system.$("guide").style.top=(_system._scroll().y+5)+"px";};
+
+  if(click){_system.$("cover").onclick=function(){
+
+         _system._cover();
+
+         _system.$("guide").style.display="none";
+
+ _system.$("cover").onclick=null;
+
+ window.onresize=null;
+  };}
+   },
+   _zero:function(n){
+
+      return n<0?0:n;
+
+   }
+
+}
+</script>
+<div id="cover"></div>
+<div id="guide"><img src="images/lottery_m/shareto.png" width="278" height="198"></div> 
+</body>
+</html>

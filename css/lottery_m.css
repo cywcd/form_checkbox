@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*----------------index----------------------*/
+/*css reset*/
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, th, td, pre, blockquote, fieldset, lengend, input, button, textarea, form,a{margin: 0; padding: 0; outline:none;}
+body, input, button, textarea, select{font-size:12px; font-family:"\9ED1\4F53", "Microsoft YaHei", Helvetica, Tahoma, Arial, sans-serif;}
+h1, h2, h3, em, i, th, caption, cite, code, address{font-style: normal; font-weight: normal;}
+ul, ol{list-style: none;}
+img, fieldset{border: 0 none;}
+input, textarea{outline: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+button, input, select, label{vertical-align:middle;}
+a{color: #333; outline: none; text-decoration: none;}
+a:focus{outline: none;}
+a:hover{text-decoration: underline;}
+a:active{star:expression(this.onfocus=this.blur());}
+.clearfix{_zoom:1; /*height:1%;*/}
+.clearfix:after{content:""; clear: both; display:block;}
+header, hgroup, nav, menu, main, section, article, summary, details, aside, figure, figcaption, footer{display: block;}
+
+/*css common*/
+body{ background:#fff; font-size:62.5%; min-width:320px;}
+
+/*main*/
+.banner{ width:100%;}
+.banner img{ width:100%; height:auto; display:block;}
+.con{ width:100%;}
+.con h2{width:100%; height:3rem; background:#4e4e4e; text-align:center; line-height:3rem; color:#fff; font-size:0.8rem;}
+.wrap{ width:100%; float:left;}
+.conbox1{width:100%; border-bottom:1rem solid #e6e6e6; float:left;}
+.conbox1 p{ padding-left:.6rem; padding-top:.8rem; font-size:1.15rem;}
+.conbox1 p span{ color:#fe0000;}
+.active_lot{ width:100%; padding-top:1.5rem; float:left; text-align:center;}
+.active_lot a{ padding:.2rem .5rem; background:#ff5a54; display:inline-block; color:#fff; font-size:1.5rem; text-decoration:none;}
+.active_lot a:active{background:#f73730;}
+.active_lot span{ width:100%; padding:.2rem 0; display:block; text-align:center; color:#999999; font-size:1.2rem;}
+
+.varbox{ width:100%; padding:.8rem 0; border-bottom:.8rem solid #e6e6e6; background:#fff url(../images/lottery_m/ico_var.jpg) .8rem center no-repeat; font-size:.9rem; color:#333;  float:left; background-size:1.5rem;}
+.varbox p{padding:0 .8rem 0 2.5rem; float:left;} 
+
+.conbox2{width:100%; padding-bottom:1.5rem; float:left;}
+.conbox2 p{ padding:1rem 1.5rem; float:left; font-size:1rem; line-height:1.5;}
+
+/*----------分享页----------*/
+body.bg1{ background:#e6e6e6;}
+.conshare{width:100%; background:#fff; padding:1rem 0 0; margin-top:1rem; border-bottom:1rem solid #e6e6e6; float:left;}
+.conshare p{width:100%; float:left; text-align:center; font-size:1rem; line-height:1.5;}
+.conshare p span{ color:#d20000;}
+.time_js{width:100%; float:left; text-align:center; font-size:1rem;  margin-bottom:1rem; line-height:2;}
+.cor_red{ width:100%; text-align:center; color:#d20000;}
+.bton{ width:90%; height:2.8rem; border-radius:.5rem; border:1px solid #042e1a; font-size:1.1rem; color:#042e1a; text-align:center; line-height:2.8rem; margin:0 auto; margin-top:2rem;}
+
+
+/*----------收货人地址页----------*/
+/*头部*/
+	#header{z-index:999;background-color:#042f1a;position:relative;  height:3rem;display: block; border-bottom:1rem solid #f3f4f6;}
+	#header h1{color: #fff;font-size: 1.2rem;line-height: 3rem;text-align:center;  font-weight:normal;font-family:"\5FAE\8F6F\96C5\9ED1"}
+	#header .header_r{position: absolute;top: 0;right: 0;}
+	#header .header_r a {width: 3rem;height:3rem;display: block;padding: 0 0.2rem;text-indent: -999em;overflow: hidden;}
+	#header .header_l{position: absolute;top: 0;left: 0; background:url(../images/lottery_m/bd.jpg) right center no-repeat;}
+	#header .header_l a {width: 3rem;height:3rem;display: block;padding: 0 0.2rem;text-indent: -999em;overflow: hidden;}
+	#header .header_search .ico_03{ -webkit-background-size:2rem 2rem;-moz-background-size:2rem 2rem;background-size:2rem 2rem; }
+.ico_10{background:url(../images/lottery_m/ico_10.png)  no-repeat 50% 50%;-webkit-background-size:1.2rem 1.2rem;-moz-background-size:1.2rem 1.2rem;background-size:1.2rem 1.2rem; } /* 箭头向左_白色 */
+
+/*main*/
+.bg_w{ background:#fff;}
+.btbd{ border-top:.1rem solid #dddddd;}
+.ectouch_table { margin:0 auto; width:95%; padding:1rem 2.5% 2rem; font-size:.8rem; color:#000000;}
+.ectouch_table input{ width:90%; display:inline-block; padding:.3rem; text-indent:.5rem; font-size:.8rem; border-radius:0;}
+.ectouch_table select{padding:.3rem;}
+.ectouch_table td {
+	padding: 5px
+}
+.ectouch_table td em{ color:#ff0000; padding-right:.2rem; display:inline-block;}
+.ectouch_table_no_border td {
+	border: none;
+}
+.bton2{ width:100%; height:2.8rem; border-radius:.5rem; background:#042e1a; font-size:1.1rem; color:#fff; text-align:center; line-height:2.8rem; margin:0 auto; border:none;}
+
+/* iCheck plugin Line skin, green
+----------------------------------- */
+.icheckbox_line-green,
+.iradio_line-green {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: .5rem .8rem; text-align:center;
+    font-size: 13px;
+    line-height: 17px;
+    color: #333;
+    background:none; 
+    border:1px solid #ddd;
+    cursor: pointer;
+}
+    .icheckbox_line-green .icheck_line-icon,
+    .iradio_line-green .icheck_line-icon {
+        position: absolute;
+        top: 50%;
+        left: 13px;
+        width: 13px;
+        height: 11px;
+        margin: -5px 0 0 0;
+        padding: 0;
+        overflow: hidden; 
+    background:none;
+    }
+    
+    .icheckbox_line-green.checked,
+    .iradio_line-green.checked {
+        background:none; 
+    border:1px solid #dddddd;
+    }
+        .icheckbox_line-green.checked .icheck_line-icon,
+        .iradio_line-green.checked .icheck_line-icon {
+            background-position: -15px 0;
+        }
+    .icheckbox_line-green.disabled,
+    .iradio_line-green.disabled {
+        background: #89E6C4;
+        cursor: default;
+    }
+        .icheckbox_line-green.disabled .icheck_line-icon,
+        .iradio_line-green.disabled .icheck_line-icon {
+            background-position: -30px 0;
+        }
+    .icheckbox_line-green.checked.disabled,
+    .iradio_line-green.checked.disabled {
+        background: #89E6C4;
+    }
+        .icheckbox_line-green.checked.disabled .icheck_line-icon,
+        .iradio_line-green.checked.disabled .icheck_line-icon {
+            background-position: -45px 0;
+        }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_line-green .icheck_line-icon,
+    .iradio_line-green .icheck_line-icon {
+        background-image: url(line@2x.png);
+        -webkit-background-size: 60px 13px;
+        background-size: 60px 13px;
+    }
+}
+.icheckbox_line-green.checked{border:1px solid #042E1A;}
+.newactive{ width:100%; margin-top:.8rem; margin-bottom:1.5rem; float:left;}
+.newactive dl{ width:96%; padding:0 2%; float:left;}
+.newactive dl dt{width:100%; margin-bottom:.5rem; font-size:.8rem; color:#333;  float:left;}
+.newactive dl dd{ width:46%; margin:.4rem 2%; float:left;}
+.newactive dl dd label{ font-size:.6rem;}
+
+.other{ border:1px solid #ddd; height:1.4rem;}
+.checked_active{ border:1px solid #042E1A;}
+
+/*遮罩*/
+#cover{display:none;position:absolute;left:0;top:0;z-index:18888;background-color:#000000;opacity:0.7;}
+#guide{display:none;position:absolute;right:18px;top:5px;z-index:19999;}
+#guide img{width:260px;height:180px;}

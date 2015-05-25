@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>0元抽奖iphone6手机免费送</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="css/lottery_m.css" rel="stylesheet">
+<!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body class="bg_w">
+<script type="text/javascript" src="http://www.zhubaotown.com/mobile/data/static/js/utils.js"></script><script type="text/javascript" src="http://www.zhubaotown.com/mobile/data/static/js/region.js"></script><script type="text/javascript" src="http://www.zhubaotown.com/mobile/data/static/js/shopping_flow.js"></script> 
+      <script type="text/javascript">
+		  region.isAdmin = false;
+		  		  var consignee_not_null = "收货人姓名不能为空！";
+		  		  var country_not_null = "请您选择收货人所在国家！";
+		  		  var province_not_null = "请您选择收货人所在省份！";
+		  		  var city_not_null = "请您选择收货人所在城市！";
+		  		  var district_not_null = "请您选择收货人所在区域！";
+		  		  var invalid_email = "您输入的邮件地址不是一个合法的邮件地址。";
+		  		  var address_not_null = "收货人的详细地址不能为空！";
+		  		  var tele_not_null = "电话不能为空！";
+		  		  var shipping_not_null = "请您选择配送方式！";
+		  		  var payment_not_null = "请您选择支付方式！";
+		  		  var goodsattr_style = "1";
+		  		  var tele_invaild = "电话号码不有效的号码";
+		  		  var zip_not_num = "邮政编码只能填写数字";
+		  		  var mobile_invaild = "手机号码不是合法号码";
+		  		  
+		  onload = function() {
+			if (!document.all)
+			{
+			  document.forms['theForm'].reset();
+			}
+		  }
+		  
+	  </script>
+<header id="header">
+      <div class="header_l header_return"> <a class="ico_10" href="javascript:history.go(-1)"> 返回 </a> </div>
+      <h1> 收货人信息 </h1>
+</header>
+<section class="wrap btbd">
+      <section class="ectouch_table">
+      <form action="user.php" method="post" name="theForm" onsubmit="return checkConsignee(this)">
+        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table">
+          <tbody><tr>
+          	<td width="70"><em>*</em>收货人</td>
+            <td align="left"><input name="consignee" placeholder="收货人姓名(必填)" type="text" class="inputBg_touch" value=""> </td>
+          </tr>
+          <tr>
+          	<td><em>*</em>手机号</td>
+            <td align="left"><input placeholder="电话(必填)" name="tel" type="text" class="inputBg_touch" value=""></td>
+          </tr>
+          <tr>
+          	<td><em>*</em>配送区域</td>
+            <td align="left">
+               <!--<select name="country" onchange="region.changed(this, 1, 'selProvinces')">
+                <option value="0">请选择</option>
+                                <option value="1" >中国</option>
+                              </select>-->
+              <select name="province" id="selProvinces" onchange="region.changed(this, 2, 'selCities')">
+                <option value="0">请选择</option>
+                                <option value="2">北京</option>
+                                <option value="3">安徽</option>
+                                <option value="4">福建</option>
+                                <option value="5">甘肃</option>
+                                <option value="6">广东</option>
+                                <option value="7">广西</option>
+                                <option value="8">贵州</option>
+                                <option value="9">海南</option>
+                                <option value="10">河北</option>
+                                <option value="11">河南</option>
+                                <option value="12">黑龙江</option>
+                                <option value="13">湖北</option>
+                                <option value="14">湖南</option>
+                                <option value="15">吉林</option>
+                                <option value="16">江苏</option>
+                                <option value="17">江西</option>
+                                <option value="18">辽宁</option>
+                                <option value="19">内蒙古</option>
+                                <option value="20">宁夏</option>
+                                <option value="21">青海</option>
+                                <option value="22">山东</option>
+                                <option value="23">山西</option>
+                                <option value="24">陕西</option>
+                                <option value="25">上海</option>
+                                <option value="26">四川</option>
+                                <option value="27">天津</option>
+                                <option value="28">西藏</option>
+                                <option value="29">新疆</option>
+                                <option value="30">云南</option>
+                                <option value="31">浙江</option>
+                                <option value="32">重庆</option>
+                                <option value="33">香港</option>
+                                <option value="34">澳门</option>
+                                <option value="35">台湾</option>
+                              </select>
+              <select name="city" id="selCities" onchange="region.changed(this, 3, 'selDistricts')">
+                <option value="0">请选择</option>
+                              </select>
+              <select name="district" id="selDistricts" style="display:none">
+                <option value="0">请选择</option>
+                              </select></td>
+          </tr>
+          <tr>
+          	<td><em>*</em>详细地址</td>
+            <td align="left"><input name="address" placeholder="详细地址(必填)" type="text" class="inputBg_touch" value=""></td>
+          </tr>
+          <tr>
+          	<td>邮政编码</td>
+            <td align="left"><input placeholder="邮政编码" name="zipcode" type="text" class="inputBg_touch" value=""></td>
+          </tr>
+        </tbody></table>
+        <div class="newactive">
+        	<dl>
+            	<dt>希望参与活动（可多选）</dt>
+                <dd><input class="selects" type="checkbox"><label>新品品鉴会</label></dd>
+                <dd><input class="selects" type="checkbox"><label>滇西特色旅游</label></dd>
+                <dd><input class="selects" type="checkbox"><label>藏友分享会</label></dd>
+                <dd><input class="selects" type="checkbox"><label>私人定制活动</label></dd>
+                <dd><input class="selects" type="checkbox"><label>珠宝玉石文化品鉴</label></dd>
+                <dd><input class="selects" type="checkbox"><label>珠宝镶嵌改款活动</label></dd>
+                <dd><input class="selects" type="checkbox"><label>滇西边境土特产代购和赠送</label></dd>
+            	<dd><input class="other" placeholder="请输入其他活动" type="text"></dd>
+            </dl>
+        </div>
+        <button type="submit" class="bton2">提交参与抽奖</button>
+      </form>
+      </section>
+</section>
+<!--表单美化-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/icheck.js?v=1.0.2"></script>
+<script>
+$(document).ready(function(){
+  $('.selects').each(function(){
+    var self = $(this),
+      label = self.next(),
+      label_text = label.text();
+
+    label.remove();
+    self.iCheck({
+      checkboxClass: 'icheckbox_line-green',
+      insert: label_text
+    });
+  });
+  
+});
+</script>
+</body>
+</html>
